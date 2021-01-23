@@ -1,0 +1,935 @@
+  @media (max-width 767px) {
+    // mobile
+    // app down
+    .mobileDownload {
+      width 96%;
+      padding 0 2%
+      height .5rem;
+      background #fff;
+      position relative;
+      z-index 100;
+      top 0;
+      border-bottom 1px solid #dcdcdc;
+      .el-button{
+        padding .1rem .3rem
+        color #FF8934
+        border 1px solid #FF8934
+      }
+      .mobileApp{
+        width: .4rem
+        height .4rem
+        border-radius 4px
+        overflow hidden
+      }
+      .mobileApp>img{
+        max-width: 100%
+        height 100%
+      }
+      .el-button:hover{
+        background transparent
+      }
+      .appCloseBtn{
+        font-size .2rem
+      }
+      .appCloseBtn .el-icon-circle-close{
+        color #ababab
+      }
+    }
+    .navigation {
+      // height 2.8rem
+      background url(/img/m_banner.png) center bottom no-repeat
+      background-size cover
+    }
+
+    .banner-text {
+      margin 0 auto .5rem 0
+      height 0.6rem
+      width 2.25rem
+      background url('/img/m_banner_logo.png') center center no-repeat
+      background-size 90%
+    }
+    .banner-text {
+      display: flex
+      flex-direction: column
+      margin 0 auto
+    }
+    .banner-text .banbooreadImg{
+      width: 1.8rem
+      height .6rem
+    }
+    .banner-text .banbooreadImg img{
+      max-width: 100%
+    }
+    .banbooreadDec{
+      font-size: .18rem;
+      margin-top: .12rem;
+    }
+    .panda_qr {
+      display none
+      position fixed
+      top 10%
+      right 10px
+      width 1.2rem
+      height 2rem
+
+      >img {
+        max-width 100%
+        height 100%
+      }
+    }
+
+    .acre-module {
+      .br-titel {
+        margin 0.24rem 0 0.15rem 0
+        font-size .15rem
+      }
+
+      .br-module {
+        padding 0 0rem 0.6rem 0rem
+      }
+
+      .bbiconfont {
+        font-size 0.12rem
+        color #FF8934
+      }
+
+      .acre-what-span {
+        width 100%
+        height 1.0rem
+        display flex
+        justify-content center
+
+        .acre-what-img {
+          max-width 100%
+          height 100%
+        }
+      }
+
+      .acre-what-h4 {
+        font-size 0.14rem
+        margin-bottom .08rem
+        color #333333
+      }
+
+      .acre-what-p {
+        font-size 0.12rem
+        color #777777
+        width 90% 
+        text-align center
+      }
+
+      .settlement-cell {
+        background #FFF2E0
+        border-radius 20px
+        position relative
+        margin-top 0.4rem
+        width 80%
+        margin-left 10%
+      }
+
+      .settlement-tip {
+        position relative
+        margin-right -40%
+        margin-top -14px
+        background #2EC989
+        border-radius 0 0 0.22rem 0.22rem
+        padding 0.06rem 0.2rem
+        font-size 0.14rem
+        color #FFFFFF
+      }
+
+      .settlement-tip:before {
+        content ''
+        position absolute
+        top 0
+        left -8px
+        width 0
+        height 0
+        border-width 0 0 14px 8px
+        border-style solid
+        border-color #0FA064 transparent
+      }
+
+      .settlement-tip:after {
+        content ''
+        position absolute
+        top 0
+        right -8px
+        width 0
+        height 0
+        border-width 0 8px 14px 0
+        border-style solid
+        border-color #0FA064 transparent
+      }
+
+      .settlement-dec {
+        padding 0 0.18rem 0.18rem
+      }
+
+      .settlement-dec-h4 {
+        font-size .15rem
+        color #FF8934
+        font-weight 600
+        margin-bottom 0.2rem
+      }
+
+      .settlement-dec >p {
+        margin-bottom 0.14rem
+        font-size 0.14rem
+        color #FF8934
+      }
+
+      .settlement-worry {
+        width 100%
+        height auto
+        position relative
+      }
+
+      .example-test {
+        position absolute
+        left 0
+        top 5%
+        width 0.8rem
+        height 0.4rem
+      }
+
+      .example-test>img {
+        height 100%
+        max-width 100%
+      }
+
+      .example-rocket>img {
+        height 100%
+        max-width 100%
+      }
+
+      .example-rocket {
+        position absolute
+        right 5%
+        top -2rem
+        width 0.58rem
+        height 1.36rem
+      }
+
+      .plant-bud {
+        width 100%
+        max-height 100%
+      }
+
+      // 阅读体系
+      .level-text {
+        font-size 0.14rem
+        color #777777
+        width: 80%;
+        margin: 0 auto
+      }
+
+      .level-module {
+        margin 0.3rem 0 0.3rem 0
+        padding 0 0.1rem
+        position relative
+      }
+
+      .level-module-img {
+        width 94%
+        height 2.0rem
+        margin-left 3%
+      }
+
+      .level-module-img>img {
+        max-width 100%
+        height 100%
+      }
+
+      .gold-subimg-l {
+        width 1.1rem
+        height 1.1rem
+        position absolute
+        top 30%
+      }
+
+      .gold-subimg-l>img {
+        max-width 100%
+        height 100%
+      }
+
+      .gold-subimg-r {
+        position absolute
+        right 0%
+        top 30%
+      }
+
+      .gold-subimg-r>span:nth-child(1) {
+        width 0.33rem
+        height 0.33rem
+      }
+
+      .gold-subimg-r>span:nth-child(2) {
+        margin-top 0.75rem
+        width 1.01rem
+        height 0.65rem
+      }
+
+      .gold-subimg-r>span>img {
+        max-width 100%
+      }
+
+      .goldbtn {
+        margin 0 auto
+        width 85%
+      }
+
+      .goldbtn>p {
+        cursor pointer
+        text-align center
+        padding 0.1rem 0.06rem
+        font-size .1rem
+        border-radius 30% / 0.35rem
+      }
+
+      .goldbtn>p:nth-child(1) {
+        background #FFCF53
+        color #6D1F1C
+      }
+
+      .goldbtn>p:nth-child(2) {
+        background #FF8934
+        color #fff
+      }
+
+      .goldbtn>p:nth-child(3) {
+        background #19ab70
+        color #fff
+      }
+
+      .goldbtnActColorYellow {
+        box-shadow 0 0 5px 5px rgba(255, 207, 83, 0.4)
+      }
+
+      .goldbtnActColorOrange {
+        box-shadow 0 0 5px 5px rgba(255, 137, 52, 0.4)
+      }
+
+      .goldbtnActColorGreen {
+        box-shadow 0 0 5px 5px rgba(25, 186, 112, 0.5)
+      }
+
+      // intelligance
+      .intelligance {
+        // height 3rem
+        margin-bottom 0.2rem
+        display flex
+        flex-direction column
+      }
+
+      .intelligance-arca {
+        height 100%
+      }
+
+      .intelligance-arca-l {
+        position relative
+        width 80%
+        margin-left 10%
+        margin-top 0.2rem
+      }
+
+      .intelligance-arca-l .chart_report {
+        width 100%
+        height 1.4rem
+      }
+
+      .chart_report>.chart_report_img {
+        max-width 100%
+        height 100%
+      }
+
+      .intelligancereport {
+        position absolute
+        top -0.3rem
+        width 100%
+        height 1.65rem
+      }
+
+      .intelligancereport>p {
+        width 90%
+        font-size 0.15rem
+        color #777777
+        width 100%
+        max-width 100%
+      }
+
+      .intelligance-arca-r-data {
+        width 80%
+        margin-top 0.2rem
+        height 2.4rem
+      }
+
+      .intelligance-p {
+        width 80%
+        height 0.55rem
+        color #fff
+        text-align center
+        line-height 0.45rem
+      }
+
+      .intelligance-orange {
+        background url('/img/Fill_1.png') no-repeat
+        background-size 100%
+      }
+
+      .intelligance-yellow {
+        background url('/img/Fill_2.png') no-repeat
+        background-size 100%
+      }
+
+      .intelligance-green {
+        background url('/img/Fill_3.png') no-repeat
+        background-size 100%
+      }
+
+      // dorpwith
+      .try-enough {
+        padding 0.2rem 0
+      }
+
+      .receptpanda {
+        width 1.2rem
+        height 1.2rem
+      }
+
+      .receptpanda>img {
+        height 100%
+        max-width 100%
+      }
+
+      .receptpandaQrcode {
+        margin 0 0 0.1rem 0
+        width 1rem
+        height 1rem
+      }
+
+      .receptpandaQrcode>img {
+        height 100%
+        max-width 100%
+        margin-left -.05rem
+      }
+
+      .figure-enough {
+        position relative
+      }
+
+      .figure-enough .through {
+        margin-bottom 0.12rem
+        font-size 0.14rem
+        color #FFFFFF
+      }
+
+      .figure-enough .through>span {
+        font-size 0.28rem
+        color #2EC989
+      }
+
+      .figuredraem {
+        cursor pointer
+        width 50%
+        height 0.36rem
+        line-height 0.36rem
+        font-size 0.14rem
+        color #FFFFFF
+        background #FF8934
+        border-radius 0.24rem
+      }
+
+      .figure-enough .circel-line {
+        position absolute
+        left 50%
+        width 0.32rem
+        height 0.48rem
+        bottom 0
+      }
+
+      .figure-enough .circel-line > img {
+        max-width 100%
+        height 100%
+      }
+
+      .figure-enough .circel-test {
+        position absolute
+        width 0.45rem
+        height 0.29rem
+        bottom 0
+        right 0
+      }
+
+      .figure-enough .circel-test > img {
+        max-width 100%
+        height 100%
+      }
+
+      // foot
+      .following {
+        margin 0.2rem 0
+        margin-left 10px
+      }
+
+      .follow-titel {
+        font-size 0.14rem
+        color #333333
+      }
+
+      .follow-us {
+        font-size 0.12rem
+        color #777
+        height 1rem
+      }
+      .mobile-top {
+        justify-content flex-start
+        margin-top .04rem
+      }
+      .following .wechat {
+        margin-left 0.2rem
+        font-size 0.12rem
+      }
+
+      .service-icon {
+        width 0.26rem
+        height 0.2rem
+        margin-right 0.04rem
+      }
+
+      .service-icon >img {
+        max-width 100%
+        height 100%
+      }
+    }
+  }
+
+  @media (min-width 768px) {
+    // pad and up
+    .navigation {
+      min-height: 4.5rem
+      background url(/img/pc_banner.png) center bottom no-repeat
+      background-size cover
+    }
+    .banner-text {
+      display: flex
+      flex-direction: column
+      margin-top 1rem
+      margin-left 15%
+    }
+    .banner-text .banbooreadImg{
+      width: 3.02rem
+      height .8rem
+    }
+    .banner-text .banbooreadImg img{
+      max-width: 100%
+    }
+    .banbooreadDec{
+      font-size: .32rem;
+      margin-top: .15rem;
+    }
+    .panda_qr {
+      position fixed
+      top 50%
+      right 10px
+      width 1.5rem
+      height 2.6rem
+
+      >img {
+        max-width 100%
+        height 100%
+      }
+    }
+
+    .acre-module {
+      .br-titel {
+        margin 0.5rem 0 0.4rem 0
+        font-size .22rem
+      }
+
+      .br-module {
+        padding 0 0 1rem 0
+      }
+
+      .bbiconfont {
+        font-size 0.24rem
+        color #FF8934
+      }
+
+      .acre-what-span {
+        width 2.5rem
+        height 2rem
+
+        .acre-what-img {
+          max-width 100%
+          height 100%
+        }
+      }
+
+      .acre-what-h4 {
+        font-size 0.18rem
+        color #333333
+      }
+
+      .acre-what-p {
+        font-size 0.16rem
+        color #777777
+        width 90%
+        text-align center
+      }
+
+      .settlement-cell {
+        background #FFF2E0
+        border-radius 20px
+        position relative
+      }
+
+      .settlement-tip {
+        position relative
+        margin-right -40%
+        margin-top -18px
+        background #2EC989
+        border-radius 0 0 0.22rem 0.22rem
+        padding 0.06rem 0.2rem
+        font-size 0.18rem
+        color #FFFFFF
+      }
+
+      .settlement-tip:before {
+        content ''
+        position absolute
+        top 0
+        left -8px
+        width 0
+        height 0
+        border-width 0 0 18px 8px
+        border-style solid
+        border-color #0FA064 transparent
+      }
+
+      .settlement-tip:after {
+        content ''
+        position absolute
+        top 0
+        right -8px
+        width 0
+        height 0
+        border-width 0 8px 18px 0
+        border-style solid
+        border-color #0FA064 transparent
+      }
+
+      .settlement-dec {
+        padding 0 0.18rem 0.18rem
+      }
+
+      .settlement-dec-h4 {
+        font-size 24px
+        color #FF8934
+        font-weight 600
+        margin-bottom 0.2rem
+      }
+
+      .settlement-dec >p {
+        margin-bottom 0.15rem
+        font-size 0.16rem
+        color #FF8934
+      }
+
+      .settlement-worry {
+        width 100%
+        // height 2rem
+        position relative
+      }
+
+      .example-test {
+        position absolute
+        left 0
+        top 5%
+        width 1.6rem
+        height 1.2rem
+      }
+
+      .example-test>img, .example-rocket>img {
+        max-width 100%
+        height 100%
+      }
+
+      .example-rocket {
+        position absolute
+        right 5%
+        top -2rem
+        width 0.58rem
+        height 1.36rem
+      }
+
+      .plant-bud {
+        width 100%
+        max-height 100%
+      }
+
+      // 阅读体系
+      .level-text {
+        font-size 0.18rem
+        color #777777
+      }
+
+      .level-module {
+        margin 0.56rem 0 0.66rem 0
+        position relative
+      }
+
+      .gold-subimg-l {
+        width 2.28rem
+        height 2.28rem
+        position absolute
+        top 30%
+      }
+
+      .gold-subimg-l>img {
+        max-width 100%
+        height 100%
+      }
+
+      .gold-subimg-r {
+        position absolute
+        right 2%
+        top 50%
+      }
+
+      .gold-subimg-r>span:nth-child(1) {
+        width 0.53rem
+        height 0.53rem
+      }
+
+      .gold-subimg-r>span:nth-child(2) {
+        margin-top 1.4rem
+        width 2.26rem
+        height 1.45rem
+      }
+
+      .gold-subimg-r>span>img {
+        max-width 100%
+      }
+
+      .goldbtn {
+        margin 0 auto
+        width 6.8rem
+      }
+
+      .goldbtn>p {
+        cursor pointer
+        text-align center
+        padding 0.25rem 0.24rem
+        border-radius 30% / 0.35rem
+      }
+
+      .goldbtn>p:nth-child(1) {
+        background #FFCF53
+        color #6D1F1C
+      }
+
+      .goldbtn>p:nth-child(2) {
+        background #FF8934
+        color #fff
+      }
+
+      .goldbtn>p:nth-child(3) {
+        background #19ab70
+        color #fff
+      }
+
+      .goldbtnActColorYellow {
+        box-shadow 0 0 5px 5px rgba(255, 207, 83, 0.4)
+      }
+
+      .goldbtnActColorOrange {
+        box-shadow 0 0 5px 5px rgba(255, 137, 52, 0.4)
+      }
+
+      .goldbtnActColorGreen {
+        box-shadow 0 0 5px 5px rgba(25, 186, 112, 0.5)
+      }
+
+      // intelligance
+      .intelligance {
+        height 4rem
+      }
+
+      .intelligance-arca-l {
+        position relative
+      }
+
+      .intelligance-arca-l .chart_report {
+        width 3.48rem
+        height 3.48rem
+      }
+
+      .chart_report>img {
+        max-width 100%
+      }
+
+      .intelligancereport {
+        position absolute
+        top -0.3rem
+        width 100%
+        height 100%
+      }
+
+      .intelligancereport>p {
+        width 80%
+        font-size 0.15rem
+        color #777777
+      }
+
+      .intelligance-arca-r {
+        height 100%
+      }
+
+      .intelligance-arca-r-data {
+        height 100%
+      }
+
+      .intelligance-orange {
+        width 2rem
+        height 0.6rem
+        line-height 0.4rem
+        background url('/img/Fill_1.png') no-repeat
+        background-size 100%
+        padding 0.1rem 0.6rem
+        color #fff
+      }
+
+      .intelligance-yellow {
+        width 2rem
+        height 0.6rem
+        line-height 0.4rem
+        background url('/img/Fill_2.png') no-repeat
+        background-size 100%
+        padding 0.1rem 0.6rem
+        color #fff
+      }
+
+      .intelligance-green {
+        width 2rem
+        height 0.6rem
+        line-height 0.4rem
+        background url('/img/Fill_3.png') no-repeat
+        background-size 100%
+        padding 0.1rem 0.6rem
+        color #fff
+      }
+
+      // dorpwith
+      .try-enough {
+        padding 0.3rem 0
+      }
+
+      .receptpanda {
+        width 1.2rem
+        height 1.2rem
+      }
+
+      .receptpanda>img {
+        height 100%
+        max-width 100%
+      }
+
+      .receptpandaQrcode {
+        margin 0.1rem 0
+        width 1rem
+        height 1rem
+      }
+
+      .receptpandaQrcode>img {
+        height 100%
+        max-width 100%
+      }
+
+      .figure-enough {
+        position relative
+      }
+
+      .figure-enough .through {
+        margin-bottom 0.2rem
+        font-size 0.20rem
+        color #FFFFFF
+      }
+
+      .figure-enough .through>span {
+        font-size 0.42rem
+        color #2EC989
+      }
+
+      .figuredraem {
+        cursor pointer
+        width 2.4rem
+        height 0.5rem
+        line-height 0.5rem
+        font-size 0.22rem
+        color #FFFFFF
+        background #FF8934
+        border-radius 0.48rem
+      }
+
+      .figure-enough .circel-line {
+        position absolute
+        left 50%
+        width 0.64rem
+        height 0.95rem
+        bottom 0
+      }
+
+      .figure-enough .circel-line > img {
+        max-width 100%
+        height 100%
+      }
+
+      .figure-enough .circel-test {
+        position absolute
+        width 0.89rem
+        height 0.61rem
+        bottom 0
+        right 0
+      }
+
+      .figure-enough .circel-test > img {
+        max-width 100%
+        height 100%
+      }
+
+      // foot
+      .following {
+        margin 0.4rem 0
+      }
+
+      .follow-titel {
+        font-size 0.24rem
+        color #333333
+      }
+
+      .follow-us {
+        font-size 0.14rem
+        color #777
+        height 1.2rem
+      }
+      .service-email {
+        font-size 0.14rem
+        color #777
+      }
+      .following .wechat {
+        margin-left 0.2rem
+      }
+
+      .service-icon {
+        width 0.26rem
+        height 0.2rem
+        margin-right 0.04rem
+      }
+
+      .service-icon img {
+        max-width 100%
+        height 100%
+      }
+    }
+  }

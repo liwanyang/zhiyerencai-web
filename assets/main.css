@@ -1,0 +1,14 @@
+/* 每一个页面的切换都有淡出 (fade) 效果 */
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+/* 给某个页面自定义过渡特效的 */
+.test-enter-active, .test-leave-active {
+  transition: opacity .5s;
+}
+.test-enter, .test-leave-active {
+  opacity: 0;
+}
