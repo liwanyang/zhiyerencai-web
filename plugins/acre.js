@@ -21,7 +21,9 @@ import {
   Tooltip,
   Dropdown,
   DropdownItem,
-  DropdownMenu
+  DropdownMenu,
+  Carousel,
+  CarouselItem
 
 } from 'element-ui'
 Vue.use(Icon);
@@ -40,6 +42,8 @@ Vue.use(Tooltip);
 Vue.use(Dropdown);
 Vue.use(DropdownItem);
 Vue.use(DropdownMenu);
+Vue.use(Carousel);
+Vue.use(CarouselItem);
 
 // 拷贝插件
 Vue.use(VueClipboard)

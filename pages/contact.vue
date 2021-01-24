@@ -1,5 +1,8 @@
 <template>
-  <section class="contact">
+  <section
+    class="contact"
+    v-if="!IS_MOBILE"
+  >
     <div class="banner">
       <img
         src="~/assets/images/contact/banner_contact.png"
@@ -56,6 +59,34 @@
       <div class="about-footer">
         <footers></footers>
       </div>
+    </div>
+  </section>
+  <section
+    v-else
+    class="contact-mobile"
+  >
+    <img
+      class="bg"
+      src="~/assets/images/home/bg.png"
+      alt=""
+    >
+    <div class="service-channel">
+      <div class="title">服务通道</div>
+      <ul class="list">
+        <li
+          v-for="item in channelList"
+          :key="item.name"
+        >
+          <div class="icons">
+            <img
+              :src="item.img"
+              alt=""
+            >
+            <div class="name">{{item.name}}</div>
+          </div>
+          <div class="text">{{item.text}}</div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -259,6 +290,48 @@ export default {
   @media screen and (max-width: 1300px) {
     .service-channel, .honor, .contact-address {
       width: 960px;
+    }
+  }
+}
+
+.contact-mobile {
+  .bg {
+    position: absolute;
+    width: 95%;
+    left: 2.5%;
+  }
+
+  .title {
+    font-size: 0.26rem;
+  }
+
+  .service-channel {
+    position: relative;
+
+    .list {
+      li {
+        text-align: center;
+        margin-top: 0.37rem;
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0.01rem;
+
+          img {
+            width: 0.45rem;
+            height: 0.4rem;
+          }
+        }
+
+        .text {
+          font-size: 0.2rem;
+          width: 5.13rem;
+          line-height: 0.28rem;
+          margin: auto;
+        }
+      }
     }
   }
 }

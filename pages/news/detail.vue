@@ -1,5 +1,8 @@
 <template>
-  <section class="news-detail">
+  <section
+    class="news-detail"
+    :class="{'news-detail-mobile': IS_MOBILE}"
+  >
     <div>
       <div class="title">志业人才旗下职业蛙招聘发布战"疫"招募令</div>
       <div class="date">2020-04-23 16:11:16</div>
@@ -82,6 +85,34 @@ export default {
     img {
       width: 718px;
       margin-bottom: 22px;
+    }
+  }
+
+  &.news-detail-mobile {
+    padding: 0.27rem 0.35rem;
+    width: auto;
+
+    .content {
+      p {
+        font-size: 0.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      img {
+        width: 5.69rem;
+      }
+    }
+
+    .title {
+      font-size: 0.24rem;
+    }
+
+    .date {
+      font-size: 0.16rem;
     }
   }
 }
