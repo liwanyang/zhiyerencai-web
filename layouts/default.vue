@@ -1,9 +1,32 @@
 <template>
-  <div>
+  <div class="default">
     <!-- <transition name="slide-fade"> -->
     <div id="loding">
       <loading />
     </div>
+    <header>
+      <img
+        src="~/assets/images/logo.png"
+        alt=""
+      >
+      <ul>
+        <li :class="{actived: currentRouterName === 'index'}">
+          <nuxt-link to="/">首页</nuxt-link>
+        </li>
+        <li :class="{actived: currentRouterName === 'product'}">
+          <nuxt-link to="/product">产品和服务</nuxt-link>
+        </li>
+        <li :class="{actived: currentRouterName === 'news' || currentRouterName === 'news-detail'}">
+          <nuxt-link to="/news">动态</nuxt-link>
+        </li>
+        <li :class="{actived: currentRouterName === 'about'}">
+          <nuxt-link to="/about">关于公司</nuxt-link>
+        </li>
+        <li :class="{actived: currentRouterName === 'contact'}">
+          <nuxt-link to="/contact">联系我们</nuxt-link>
+        </li>
+      </ul>
+    </header>
     <nuxt />
     <!-- </transition> -->
   </div>
@@ -17,19 +40,25 @@ export default {
   // middleware: 'listen-route',
   computed: {
     ...mapState({
-      User: (state) => state.User,
+      User: state => state.User
     }),
+    currentRouterName() {
+      return this.$route.name;
+    }
   },
   components: {
-    loading: loading,
+    loading: loading
+  },
+  created() {
+    console.log("router::", this.currentRouterName);
   },
   mounted() {
     if (this.IS_MOBILE) {
-      (function (doc, win) {
+      (function(doc, win) {
         var docEl = doc.documentElement,
           resizeEvt =
             "orientationchange" in window ? "orientationchange" : "resize",
-          recalc = function () {
+          recalc = function() {
             var clientWidth = docEl.clientWidth;
             win.RATE = clientWidth / 750;
             if (!clientWidth) return;
@@ -53,7 +82,7 @@ export default {
         "index",
         "index-apply-funding",
         "index-sign-up",
-        "index-sign-in",
+        "index-sign-in"
       ];
       this.$router.beforeEach((to, from, next) => {
         // console.log(to.name)
@@ -70,12 +99,43 @@ export default {
           }
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style  lang="stylus">
+.default {
+  header {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: auto;
+
+    img {
+      width: 190px;
+      height: 29px;
+    }
+
+    ul {
+      display: flex;
+      margin-left: 213px;
+
+      li {
+        margin-right: 50px;
+        cursor: pointer;
+        padding-bottom: 2px;
+
+        &:hover, &.actived {
+          color: #0050B3;
+          border-bottom: 2px solid #0050B3;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   /* 屏幕在767像素以下含767像素,这里的样式生效 */
   #loding {
