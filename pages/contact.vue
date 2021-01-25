@@ -1,14 +1,26 @@
 <template>
-  <section class="contact" v-if="!IS_MOBILE">
+  <section
+    class="contact"
+    v-if="!IS_MOBILE"
+  >
     <div class="banner">
-      <img src="~/assets/images/contact/banner_contact.png" alt="" />
+      <img
+        src="~/assets/images/contact/banner_contact.png"
+        alt=""
+      />
     </div>
     <div class="service-channel">
       <div class="title">服务通道</div>
       <ul class="list">
-        <li v-for="item in channelList" :key="item.name">
+        <li
+          v-for="item in channelList"
+          :key="item.name"
+        >
           <div class="icons">
-            <img :src="item.img" alt="" />
+            <img
+              :src="item.img"
+              alt=""
+            />
             <div class="name">{{ item.name }}</div>
           </div>
           <div class="text">{{ item.text }}</div>
@@ -16,34 +28,60 @@
       </ul>
     </div>
     <div class="company-culture">
-      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+      <img
+        class="bg"
+        src="~/assets/images/home/bg.png"
+        alt=""
+      />
       <div class="honor">
         <div class="title">关注我们</div>
         <ul>
-          <li v-for="item in honorList" :key="item.name">
+          <li
+            v-for="item in honorList"
+            :key="item.name"
+          >
             <div class="name">{{ item.name }}</div>
-            <img :src="item.img" alt="" />
+            <img
+              :src="item.img"
+              alt=""
+            />
             <div class="text">{{ item.text }}</div>
           </li>
         </ul>
       </div>
       <div class="contact-address">
         <div class="title">联系我们</div>
-        <img src="~/assets/images/contact/contact_map.png" alt="" />
+        <img
+          src="~/assets/images/contact/contact_map.png"
+          alt=""
+        />
       </div>
       <div class="about-footer">
         <footers></footers>
       </div>
     </div>
   </section>
-  <section v-else class="contact-mobile">
-    <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+  <section
+    v-else
+    class="contact-mobile"
+  >
+    <img
+      class="bg"
+      src="~/assets/images/home/bg.png"
+      alt=""
+    />
     <div class="service-channel">
       <div class="title">服务通道</div>
       <ul class="list">
-        <li v-for="item in channelList" :key="item.name">
+        <li
+          v-for="item in channelList"
+          :key="item.name"
+        >
           <div class="icons">
-            <img :src="item.img" alt="" />
+            <img
+              :src="item.img"
+              alt=""
+            />
             <div class="name">{{ item.name }}</div>
           </div>
           <div class="text">{{ item.text }}</div>
@@ -54,16 +92,25 @@
       <div class="honor">
         <div class="title">关注我们</div>
         <ul>
-          <li v-for="item in honorList" :key="item.name">
+          <li
+            v-for="item in honorList"
+            :key="item.name"
+          >
             <div class="name">{{ item.name }}</div>
-            <img :src="item.img" alt="" />
+            <img
+              :src="item.img"
+              alt=""
+            />
             <div class="text">{{ item.text }}</div>
           </li>
         </ul>
       </div>
       <div class="contact-address">
         <div class="title">联系我们</div>
-        <img src="~/assets/images/contact/contact_map.png" alt="" />
+        <img
+          src="~/assets/images/contact/contact_map.png"
+          alt=""
+        />
         <div class="email">商务合作：markting@atghr.com</div>
         <div class="address">
           公司地址：上海市徐汇区桂平路418号国际孵化中心28层
@@ -90,38 +137,38 @@ export default {
           name: "在线客服",
           img: require("~/assets/images/contact/icon_online.png"),
           text:
-            "若您遇到产品使用问题，可随时与我们联系。 工作时间：工作日 9:00-18:00",
+            "若您遇到产品使用问题，可随时与我们联系。 工作时间：工作日 9:00-18:00"
         },
         {
           name: "反馈中心",
           img: require("~/assets/images/contact/icon_feedback.png"),
           text:
-            "可通过提交工单至service@atghr.com， 我们将在1-2个工作日内处理，感谢您的支持与配合！",
+            "可通过提交工单至service@atghr.com， 我们将在1-2个工作日内处理，感谢您的支持与配合！"
         },
         {
           name: "服务热线",
           img: require("~/assets/images/contact/icon_hotline.png"),
           text:
-            "电话号码：400xxxxxxx 工作时间：周一到周五（节假日除外）9:00-18:00",
-        },
+            "电话号码：400xxxxxxx 工作时间：周一到周五（节假日除外）9:00-18:00"
+        }
       ],
       honorList: [
         {
           name: "官方抖音",
           img: require("~/assets/images/contact_douyin.png"),
-          text: "为您呈现不一样的志业人才",
+          text: "为您呈现不一样的志业人才"
         },
         {
           name: "公众号",
           img: require("~/assets/images/contact_douyin.png"),
-          text: "随时随地查看您的数据报告",
+          text: "随时随地查看您的数据报告"
         },
         {
           name: "小程序",
           img: require("~/assets/images/contact_douyin.png"),
-          text: "随时随地查看您的数据报告",
-        },
-      ],
+          text: "随时随地查看您的数据报告"
+        }
+      ]
     };
   },
   computed: {},
@@ -132,7 +179,7 @@ export default {
   watch: {},
   mounted() {},
   destroyed() {},
-  methods: {},
+  methods: {}
 };
 </script>
 
@@ -283,6 +330,7 @@ export default {
 .contact-mobile {
   .title {
     text-align: center;
+    margin-top: 0.39rem;
   }
 
   .bg {

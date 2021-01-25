@@ -1,3 +1,10 @@
+<template>
+  <div>
+  </div>
+</template>
 <script>
-export default {};
+import loading from "@/components/loading";
+export default {
+  components: { loading }
+};
 </script>

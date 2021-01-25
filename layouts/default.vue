@@ -1,25 +1,32 @@
 <template>
-  <div class="default" :class="{ 'default-mobile': IS_MOBILE }">
+  <div
+    class="default"
+    :class="{ 'default-mobile': IS_MOBILE }"
+  >
     <div id="loding">
       <loading />
     </div>
-    <header v-if="!IS_MOBILE" class="header-pc">
+    <header
+      v-if="!IS_MOBILE"
+      class="header-pc"
+    >
       <div>
-        <img src="~/assets/images/logo.png" alt="" />
+        <img
+          src="~/assets/images/logo.png"
+          alt=""
+        />
         <ul>
           <li :class="{ actived: currentRouterName === 'index' }">
             <nuxt-link to="/">首页</nuxt-link>
           </li>
-          <li :class="{ actived: currentRouterName === 'product' }">
+          <!-- <li :class="{ actived: currentRouterName === 'product' }">
             <nuxt-link to="/product">产品和服务</nuxt-link>
-          </li>
-          <li
-            :class="{
+          </li> -->
+          <li :class="{
               actived:
                 currentRouterName === 'news' ||
                 currentRouterName === 'news-detail',
-            }"
-          >
+            }">
             <nuxt-link to="/news">动态</nuxt-link>
           </li>
           <li :class="{ actived: currentRouterName === 'about' }">
@@ -31,9 +38,24 @@
         </ul>
       </div>
     </header>
-    <header v-else class="header-mobile">
-      <img class="logo" src="~/assets/images/logo.png" alt="" />
-      <div></div>
+    <header
+      v-else
+      class="header-mobile"
+    >
+      <img
+        v-if="currentRouterName === 'index'"
+        class="logo"
+        src="~/assets/images/logo.png"
+        alt=""
+      />
+      <img
+        v-else
+        @click="goBack"
+        class="back"
+        src="~/assets/images/mobile_button_back.png"
+        alt=""
+      />
+      <div class="nav-name">{{getTitle}}</div>
       <img
         @click="openMask"
         class="menu"
@@ -42,7 +64,10 @@
       />
     </header>
     <transition name="fade">
-      <div class="mask" v-if="dialog">
+      <div
+        class="mask"
+        v-if="dialog"
+      >
         <ul>
           <li>
             <nuxt-link to="/">首页</nuxt-link>
@@ -77,33 +102,46 @@ import loading from "@/components/loading";
 export default {
   data() {
     return {
-      dialog: false,
+      dialog: false
     };
   },
   computed: {
     ...mapState({
-      User: (state) => state.User,
+      User: state => state.User
     }),
     currentRouterName() {
       return this.$route.name;
     },
+    getTitle() {
+      const name = this.$route.name;
+      switch (name) {
+        case "about":
+          return "关于我们";
+        case "news":
+          return "新闻动态";
+        case "contact":
+          return "联系我们";
+        default:
+          return "";
+      }
+    }
   },
   components: {
-    loading: loading,
+    loading: loading
   },
   watch: {
     $route() {
       this.dialog = false;
-    },
+    }
   },
   created() {},
   mounted() {
     if (this.IS_MOBILE) {
-      (function (doc, win) {
+      (function(doc, win) {
         var docEl = doc.documentElement,
           resizeEvt =
             "orientationchange" in window ? "orientationchange" : "resize",
-          recalc = function () {
+          recalc = function() {
             var clientWidth = docEl.clientWidth;
             win.RATE = clientWidth / 630;
             if (!clientWidth) return;
@@ -120,6 +158,15 @@ export default {
     }
   },
   methods: {
+    goBack() {
+      console.log("window.history::", window.history);
+
+      // if (window.history.length <= 1) {
+      //   this.$router.push({ path: "/" });
+      //   return;
+      // }
+      // this.$router.go(-1);
+    },
     openMask() {
       this.dialog = true;
     },
@@ -133,7 +180,7 @@ export default {
         "index",
         "index-apply-funding",
         "index-sign-up",
-        "index-sign-in",
+        "index-sign-in"
       ];
       this.$router.beforeEach((to, from, next) => {
         // console.log(to.name)
@@ -150,8 +197,8 @@ export default {
           }
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -162,6 +209,11 @@ export default {
 
   &.default-mobile {
     padding-top: 0.89rem;
+
+    .nav-name {
+      font-size: 0.22rem;
+      line-height: 0.3rem;
+    }
 
     .mask {
       z-index: 1001;
@@ -248,7 +300,9 @@ export default {
   }
 
   .header-mobile {
-    position: absolute;
+    position: fixed;
+    overflow: scroll;
+    background-color: #ffffff;
     top: 0;
     left: 0;
     right: 0;
@@ -258,10 +312,15 @@ export default {
     align-items: center;
     height: 0.89rem;
     padding: 0 0.35rem 0 0.19rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
 
     .logo {
       width: 2.49rem;
       height: 0.37rem;
+    }
+
+    .back {
+      width: 0.25rem;
     }
 
     .menu {
