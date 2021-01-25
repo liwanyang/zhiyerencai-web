@@ -1,61 +1,48 @@
 <template>
-  <div
-    class="default"
-    :class="{'default-mobile': IS_MOBILE}"
-  >
+  <div class="default" :class="{ 'default-mobile': IS_MOBILE }">
     <div id="loding">
       <loading />
     </div>
-    <header
-      v-if="!IS_MOBILE"
-      class="header-pc"
-    >
+    <header v-if="!IS_MOBILE" class="header-pc">
       <div>
-        <img
-          src="~/assets/images/logo.png"
-          alt=""
-        >
+        <img src="~/assets/images/logo.png" alt="" />
         <ul>
-          <li :class="{actived: currentRouterName === 'index'}">
+          <li :class="{ actived: currentRouterName === 'index' }">
             <nuxt-link to="/">首页</nuxt-link>
           </li>
-          <li :class="{actived: currentRouterName === 'product'}">
+          <li :class="{ actived: currentRouterName === 'product' }">
             <nuxt-link to="/product">产品和服务</nuxt-link>
           </li>
-          <li :class="{actived: currentRouterName === 'news' || currentRouterName === 'news-detail'}">
+          <li
+            :class="{
+              actived:
+                currentRouterName === 'news' ||
+                currentRouterName === 'news-detail',
+            }"
+          >
             <nuxt-link to="/news">动态</nuxt-link>
           </li>
-          <li :class="{actived: currentRouterName === 'about'}">
+          <li :class="{ actived: currentRouterName === 'about' }">
             <nuxt-link to="/about">关于公司</nuxt-link>
           </li>
-          <li :class="{actived: currentRouterName === 'contact'}">
+          <li :class="{ actived: currentRouterName === 'contact' }">
             <nuxt-link to="/contact">联系我们</nuxt-link>
           </li>
         </ul>
       </div>
     </header>
-    <header
-      v-else
-      class="header-mobile"
-    >
-      <img
-        class="logo"
-        src="~/assets/images/logo.png"
-        alt=""
-      >
+    <header v-else class="header-mobile">
+      <img class="logo" src="~/assets/images/logo.png" alt="" />
       <div></div>
       <img
         @click="openMask"
         class="menu"
         src="~/assets/images/menu_mobile.png"
         alt=""
-      >
+      />
     </header>
     <transition name="fade">
-      <div
-        class="mask"
-        v-if="dialog"
-      >
+      <div class="mask" v-if="dialog">
         <ul>
           <li>
             <nuxt-link to="/">首页</nuxt-link>
@@ -75,7 +62,7 @@
           class="close-icon"
           src="~/assets/images/mobile_button_close.png"
           alt=""
-        >
+        />
       </div>
     </transition>
 
@@ -90,33 +77,33 @@ import loading from "@/components/loading";
 export default {
   data() {
     return {
-      dialog: false
+      dialog: false,
     };
   },
   computed: {
     ...mapState({
-      User: state => state.User
+      User: (state) => state.User,
     }),
     currentRouterName() {
       return this.$route.name;
-    }
+    },
   },
   components: {
-    loading: loading
+    loading: loading,
   },
   watch: {
     $route() {
       this.dialog = false;
-    }
+    },
   },
   created() {},
   mounted() {
     if (this.IS_MOBILE) {
-      (function(doc, win) {
+      (function (doc, win) {
         var docEl = doc.documentElement,
           resizeEvt =
             "orientationchange" in window ? "orientationchange" : "resize",
-          recalc = function() {
+          recalc = function () {
             var clientWidth = docEl.clientWidth;
             win.RATE = clientWidth / 630;
             if (!clientWidth) return;
@@ -146,7 +133,7 @@ export default {
         "index",
         "index-apply-funding",
         "index-sign-up",
-        "index-sign-in"
+        "index-sign-in",
       ];
       this.$router.beforeEach((to, from, next) => {
         // console.log(to.name)
@@ -163,8 +150,8 @@ export default {
           }
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -190,12 +177,16 @@ export default {
       box-sizing: border-box;
 
       ul {
+        width: 100%;
+
         li {
           font-size: 0.2rem;
           margin-bottom: 0.19rem;
 
           a {
             color: #ffffff !important;
+            display: inline-block;
+            width: 100%;
           }
         }
       }

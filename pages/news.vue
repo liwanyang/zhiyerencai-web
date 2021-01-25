@@ -1,44 +1,21 @@
 <template>
-  <section
-    class="news"
-    v-if="!IS_MOBILE"
-  >
-    <div
-      class="banner"
-      v-if="getRourerName"
-    >
-      <img
-        src="~/assets/images/news/news.png"
-        alt=""
-      >
+  <section class="news" v-if="!IS_MOBILE">
+    <div class="banner" v-if="getRourerName">
+      <img src="~/assets/images/news/news.png" alt="" />
     </div>
     <div class="news-list">
-      <img
-        class="bg"
-        src="~/assets/images/home/bg.png"
-        alt=""
-      >
-      <div
-        class="list"
-        v-if="getRourerName"
-      >
+      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+      <div class="list" v-if="getRourerName">
         <div class="title">新闻动态</div>
         <ul>
-          <li
-            v-for="item in newList"
-            :key="item.name"
-            @click="enterDetail"
-          >
-            <img
-              :src="item.img"
-              alt=""
-            >
+          <li v-for="item in newList" :key="item.name" @click="enterDetail">
+            <img :src="item.img" alt="" />
             <div class="content">
               <div>
-                <div class="name">{{item.name}}</div>
-                <div class="text">{{item.text}}</div>
+                <div class="name">{{ item.name }}</div>
+                <div class="text">{{ item.text }}</div>
               </div>
-              <div class="date">{{item.date}}</div>
+              <div class="date">{{ item.date }}</div>
             </div>
           </li>
         </ul>
@@ -51,38 +28,25 @@
       </div>
     </div>
   </section>
-  <section
-    v-else
-    class="news-mobile"
-  >
+  <section v-else class="news-mobile">
     <div class="news-list">
-      <img
-        class="bg"
-        src="~/assets/images/home/bg.png"
-        alt=""
-      >
-      <div
-        class="list"
-        v-if="getRourerName"
-      >
+      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+      <div class="list" v-if="getRourerName">
         <div class="title">新闻动态</div>
         <ul>
           <li
             v-for="item in newList"
-            :key="item.name"
-            @click="enterDetail"
+            :key="item.id"
+            @click="enterDetail(item.id)"
           >
             <div class="content">
               <div>
-                <div class="name">{{item.name}}</div>
-                <div class="text">{{item.text}}</div>
+                <div class="name">{{ item.name }}</div>
+                <div class="text">{{ item.text }}</div>
               </div>
-              <div class="date">{{item.date}}</div>
+              <div class="date">{{ item.date }}</div>
             </div>
-            <img
-              :src="item.img"
-              alt=""
-            >
+            <img :src="item.img" alt="" />
           </li>
         </ul>
       </div>
@@ -107,40 +71,44 @@ export default {
       title: "新闻动态",
       newList: [
         {
+          id: 1,
           name: '志业人才旗下职业蛙招聘发布战"疫"招募令',
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
+          id: 2,
           name: '志业人才旗下职业蛙招聘发布战"疫"招募令',
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
+          id: 3,
           name: '志业人才旗下职业蛙招聘发布战"疫"招募令',
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
+          id: 4,
           name: '志业人才旗下职业蛙招聘发布战"疫"招募令',
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-        }
-      ]
+            '微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+        },
+      ],
     };
   },
   computed: {
     getRourerName() {
       return this.$route.name === "news";
-    }
+    },
   },
   components: { footers, footerMobile },
   created() {
@@ -152,10 +120,10 @@ export default {
   },
   destroyed() {},
   methods: {
-    enterDetail() {
-      this.$router.push({ name: "news-detail" });
-    }
-  }
+    enterDetail(id) {
+      this.$router.push({ name: "news-detail", params: { detail: id } });
+    },
+  },
 };
 </script>
 
