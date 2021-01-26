@@ -6,12 +6,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '竹子阅读-专注2~12岁儿童中文分级阅读',
+    title: '志业人才提供蓝领招聘、企业用工、职业教育、灵活用工、企业成本优化、人力外包等服务',
     meta: [
       { charset: 'utf-8' },
       { name: "viewport", content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" },
-      { name: 'keywords', content: '竹子阅读,bamboo reading,儿童中文分级阅读,绘本,图书,汉字,古诗,诗词,教育,自主阅读,语文,启蒙' },
-      { hid: 'description', name: 'description', content: '竹子阅读是分阅稚学科技发展（上海）有限公司推出的产品，为2-12岁儿童提供中文分级阅读内容和分级标准。其构建了一套中文阅读分级标准及阅读能力评测体系，并由内容团队精心打造原创读本。目前已有20+类目、5000+本分级读本。竹子阅读让你的孩子读对、读好，在阅读中建构精神世界，读着读着就能得到多元智能的全面提升。' }
+      { name: 'keywords', content: '志业人才，职业蛙' },
+      { hid: 'description', name: 'description', content: '志业人才，蓝领人力资源服务定制领跑者。公司致力于打造世界领先的产、教、研融合的人才生涯服务，累计帮助百万人入职2700余家中大型企业的心仪岗位，定制化深度解决全国企业的新生代蓝领用工痛点。与全国超50所中高职院校联合建立实训学院，聚焦现代服务业、制造业服务外包、人才招聘与派遣、中高端灵活用工、残疾人就业安置、财税筹划管理咨询等服务。' }
     ],
 
     script: [

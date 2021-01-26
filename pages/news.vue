@@ -2,27 +2,14 @@
   <section
     class="news"
     v-if="!IS_MOBILE"
-    :class="{'news-child':!getRourerName}"
+    :class="{ 'news-child': !getRourerName && isChild }"
   >
-    <div
-      class="banner"
-      v-if="getRourerName"
-    >
-      <img
-        src="~/assets/images/news/news.png"
-        alt=""
-      />
+    <div class="banner" v-if="getRourerName">
+      <img src="~/assets/images/news/news.png" alt="" />
     </div>
     <div class="news-list">
-      <img
-        class="bg"
-        src="~/assets/images/home/bg.png"
-        alt=""
-      />
-      <div
-        class="list"
-        v-if="getRourerName"
-      >
+      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+      <div class="list" v-if="getRourerName">
         <div class="title">新闻动态</div>
         <ul>
           <li
@@ -30,10 +17,7 @@
             :key="item.name"
             @click="enterDetail(item.id)"
           >
-            <img
-              :src="item.img"
-              alt=""
-            />
+            <img :src="item.img" alt="" />
             <div class="content">
               <div>
                 <div class="name">{{ item.name }}</div>
@@ -52,20 +36,10 @@
       </div>
     </div>
   </section>
-  <section
-    v-else
-    class="news-mobile"
-  >
+  <section v-else class="news-mobile">
     <div class="news-list">
-      <img
-        class="bg"
-        src="~/assets/images/home/bg.png"
-        alt=""
-      />
-      <div
-        class="list"
-        v-if="getRourerName"
-      >
+      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+      <div class="list" v-if="getRourerName">
         <div class="title">新闻动态</div>
         <ul>
           <li
@@ -80,10 +54,7 @@
               </div>
               <div class="date">{{ item.date }}</div>
             </div>
-            <img
-              :src="item.img"
-              alt=""
-            />
+            <img :src="item.img" alt="" />
           </li>
         </ul>
       </div>
@@ -106,6 +77,8 @@ export default {
   data() {
     return {
       title: "新闻动态",
+      isChild: true,
+      setTimeoutId: 0,
       newList: [
         {
           id: 1,
@@ -113,7 +86,7 @@ export default {
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划1"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划1"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
           id: 2,
@@ -121,7 +94,7 @@ export default {
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划2"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划2"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
           id: 3,
@@ -129,7 +102,7 @@ export default {
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划3"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
+            '微笑口罩计划3"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
         },
         {
           id: 4,
@@ -137,28 +110,41 @@ export default {
           img: require("~/assets/images/news/news_image.png"),
           date: "2020-04-23 16:11:16",
           text:
-            '微笑口罩计划4"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-        }
-      ]
+            '微笑口罩计划4"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+        },
+      ],
     };
   },
   computed: {
     getRourerName() {
       return Object.keys(this.$route.params).length === 0;
-    }
+    },
   },
   components: { footers, footerMobile },
-  created() {
-    //
+  watch: {
+    $route() {
+      this.setAfter();
+    },
   },
-  watch: {},
+  created() {
+    this.setAfter();
+  },
   mounted() {},
   destroyed() {},
   methods: {
+    setAfter() {
+      this.isChild = true;
+      if (Object.keys(this.$route.params).length > 0) {
+        clearTimeout(this.setTimeoutId);
+        this.setTimeoutId = setTimeout(() => {
+          this.isChild = false;
+        }, 500);
+      }
+    },
     enterDetail(id) {
       this.$router.push({ name: "news-detail", params: { detail: id } });
-    }
-  }
+    },
+  },
 };
 </script>
 

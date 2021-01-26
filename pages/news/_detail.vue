@@ -1,27 +1,19 @@
 <template>
-  <section
-    class="news-detail"
-    :class="{ 'news-detail-mobile': IS_MOBILE }"
-  >
+  <section class="news-detail" :class="{ 'news-detail-mobile': IS_MOBILE }">
     <div>
       <div class="title">{{ currentContent.title }}</div>
       <div class="date">{{ currentContent.date }}</div>
     </div>
     <div class="content">
-      <div
-        v-for="item in currentContent.contentList"
-        :key="item"
-      >
+      <div v-for="item in currentContent.contentList" :key="item">
         <p v-if="item.indexOf('/_nuxt') < 0">{{ item }}</p>
-        <img
-          v-else
-          :src="item"
-          alt=""
-        />
+        <img v-else :src="item" alt="" />
       </div>
     </div>
     <footers v-if="Object.keys(currentContent).length && !IS_MOBILE"></footers>
-    <footer-mobile v-if="Object.keys(currentContent).length && IS_MOBILE"></footer-mobile>
+    <footer-mobile
+      v-if="Object.keys(currentContent).length && IS_MOBILE"
+    ></footer-mobile>
   </section>
 </template>
 
@@ -45,8 +37,8 @@ export default {
             '"微笑口罩计划1"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
             require("~/assets/images/news/news_image.png"),
             '"微笑口罩计划2"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
-            '"微笑口罩计划3"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-          ]
+            '"微笑口罩计划3"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+          ],
         },
         {
           id: 2,
@@ -56,8 +48,8 @@ export default {
             '"微笑口罩计划4"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
             require("~/assets/images/news/news_image.png"),
             '"微笑口罩计划5"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
-            '"微笑口罩计划6"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-          ]
+            '"微笑口罩计划6"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+          ],
         },
         {
           id: 3,
@@ -67,8 +59,8 @@ export default {
             '"微笑口罩计划7"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
             require("~/assets/images/news/news_image.png"),
             '"微笑口罩计划8"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
-            '"微笑口罩计划9"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-          ]
+            '"微笑口罩计划9"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+          ],
         },
         {
           id: 4,
@@ -78,10 +70,10 @@ export default {
             '"微笑口罩计划10"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
             require("~/assets/images/news/news_image.png"),
             '"微笑口罩计划11"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
-            '"微笑口罩计划12"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在'
-          ]
-        }
-      ]
+            '"微笑口罩计划12"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
+          ],
+        },
+      ],
     };
   },
   computed: {},
@@ -92,7 +84,7 @@ export default {
   watch: {
     $route() {
       this.getRouteParams();
-    }
+    },
   },
   mounted() {
     this.getRouteParams();
@@ -104,11 +96,11 @@ export default {
       if (params.detail) {
         this.newsId = params.detail;
         this.currentContent = this.newList.find(
-          item => Number(item.id) === Number(this.newsId)
+          (item) => Number(item.id) === Number(this.newsId)
         );
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
