@@ -1,70 +1,68 @@
 <template>
-  <section
-    class="news"
-    v-if="!IS_MOBILE"
-    :class="{ 'news-child': !getRourerName && isChild }"
-  >
-    <div class="banner" v-if="getRourerName">
-      <img src="~/assets/images/news/news.png" alt="" />
-    </div>
-    <div class="news-list">
-      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-      <div class="list" v-if="getRourerName">
-        <div class="title">新闻动态</div>
-        <ul>
-          <li
-            v-for="item in newList"
-            :key="item.name"
-            @click="enterDetail(item.id)"
-          >
-            <img :src="item.img" alt="" />
-            <div class="content">
-              <div>
-                <div class="name">{{ item.name }}</div>
-                <div class="text">{{ item.text }}</div>
+  <section>
+    <section class="news" :class="{ 'news-child': !getRourerName && isChild }">
+      <div class="banner" v-if="getRourerName">
+        <img src="~/assets/images/news/news.png" alt="" />
+      </div>
+      <div class="news-list">
+        <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+        <div class="list" v-if="getRourerName">
+          <div class="title">新闻动态</div>
+          <ul>
+            <li
+              v-for="item in newList"
+              :key="item.name"
+              @click="enterDetail(item.id)"
+            >
+              <img :src="item.img" alt="" />
+              <div class="content">
+                <div>
+                  <div class="name">{{ item.name }}</div>
+                  <div class="text">{{ item.text }}</div>
+                </div>
+                <div class="date">{{ item.date }}</div>
               </div>
-              <div class="date">{{ item.date }}</div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <nuxt-child></nuxt-child>
+        </div>
+        <div class="about-footer">
+          <footers v-if="getRourerName"></footers>
+        </div>
       </div>
-      <div>
-        <nuxt-child></nuxt-child>
-      </div>
-      <div class="about-footer">
-        <footers v-if="getRourerName"></footers>
-      </div>
-    </div>
-  </section>
-  <section v-else class="news-mobile">
-    <div class="news-list">
-      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-      <div class="list" v-if="getRourerName">
-        <div class="title">新闻动态</div>
-        <ul>
-          <li
-            v-for="item in newList"
-            :key="item.id"
-            @click="enterDetail(item.id)"
-          >
-            <div class="content">
-              <div>
-                <div class="name">{{ item.name }}</div>
-                <div class="text">{{ item.text }}</div>
+    </section>
+    <section class="news-mobile">
+      <div class="news-list">
+        <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+        <div class="list" v-if="getRourerName">
+          <div class="title">新闻动态</div>
+          <ul>
+            <li
+              v-for="item in newList"
+              :key="item.id"
+              @click="enterDetail(item.id)"
+            >
+              <div class="content">
+                <div>
+                  <div class="name">{{ item.name }}</div>
+                  <div class="text">{{ item.text }}</div>
+                </div>
+                <div class="date">{{ item.date }}</div>
               </div>
-              <div class="date">{{ item.date }}</div>
-            </div>
-            <img :src="item.img" alt="" />
-          </li>
-        </ul>
+              <img :src="item.img" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div>
+          <nuxt-child></nuxt-child>
+        </div>
+        <div class="about-footer">
+          <footer-mobile v-if="getRourerName"></footer-mobile>
+        </div>
       </div>
-      <div>
-        <nuxt-child></nuxt-child>
-      </div>
-      <div class="about-footer">
-        <footer-mobile v-if="getRourerName"></footer-mobile>
-      </div>
-    </div>
+    </section>
   </section>
 </template>
 
@@ -250,6 +248,7 @@ export default {
 
 .news-mobile {
   position: relative;
+  display: none;
 
   .bg {
     position: absolute;
@@ -269,6 +268,7 @@ export default {
     ul {
       li {
         display: flex;
+        justify-content: center;
         padding: 0.26rem 0.35rem;
 
         .content {
@@ -304,6 +304,16 @@ export default {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .news {
+    display: none;
+  }
+
+  .news-mobile {
+    display: block;
   }
 }
 </style>

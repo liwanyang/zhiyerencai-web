@@ -1,45 +1,12 @@
 <template>
-  <section class="home" v-if="!IS_MOBILE">
-    <div class="banner">
-      <img src="~/assets/images/home/banner.png" alt="" />
-      <div class="title">
-        <div class="banner-title">蓝领人力资源定制领跑者</div>
-        <div class="banner-subTitle">专业成就企业未来</div>
-      </div>
-    </div>
-    <ul class="range">
-      <li v-for="item in sumList" :key="item.title">
-        <img :src="item.icon" alt="" />
-        <div class="sum-title">
-          <div class="sum">{{ item.sum }}</div>
-          <div class="title">{{ item.title }}</div>
+  <section>
+    <section class="home">
+      <div class="banner">
+        <img src="~/assets/images/home/banner.png" alt="" />
+        <div class="title">
+          <div class="banner-title">蓝领人力资源定制领跑者</div>
+          <div class="banner-subTitle">专业成就企业未来</div>
         </div>
-      </li>
-    </ul>
-    <section class="main">
-      <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-      <div class="products">
-        <product-service></product-service>
-        <advantage></advantage>
-        <custom :imgList="customList" title="这些客户更认可志业人才"></custom>
-        <custom
-          :imgList="resourcesList"
-          title="我们正联合这些伙伴改变人力资源行业"
-        ></custom>
-      </div>
-    </section>
-    <footers></footers>
-  </section>
-  <section v-else class="home-mobile">
-    <div class="banner">
-      <img
-        src="~/assets/images/home/bg_index_mobile.png"
-        class="banner-mobile"
-        alt=""
-      />
-      <div class="banner-title">
-        <div class="title">蓝领人力资源定制领跑者</div>
-        <div class="sub-title">专业成就企业未来</div>
       </div>
       <ul class="range">
         <li v-for="item in sumList" :key="item.title">
@@ -50,24 +17,59 @@
           </div>
         </li>
       </ul>
-      <div class="product-service">
-        <div class="titles">产品和服务</div>
+      <section class="main">
         <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-        <ul>
-          <li v-for="item in productList" :key="item.title">
-            <img :src="item.img" alt="" />
-            <div class="content">
-              <div class="name">{{ item.title }}</div>
-              <div class="text">{{ item.subTitle }}</div>
+        <div class="products">
+          <product-service></product-service>
+          <advantage></advantage>
+          <custom :imgList="customList" title="这些客户更认可志业人才"></custom>
+          <custom
+            :imgList="resourcesList"
+            title="我们正联合这些伙伴改变人力资源行业"
+          ></custom>
+        </div>
+      </section>
+      <footers></footers>
+    </section>
+    <section class="home-mobile">
+      <div class="banner">
+        <img
+          src="~/assets/images/home/bg_index_mobile.png"
+          class="banner-mobile"
+          alt=""
+        />
+        <div class="banner-title">
+          <div class="title">蓝领人力资源定制领跑者</div>
+          <div class="sub-title">专业成就企业未来</div>
+        </div>
+        <ul class="range">
+          <li v-for="item in sumList" :key="item.title">
+            <img :src="item.icon" alt="" />
+            <div class="sum-title">
+              <div class="sum">{{ item.sum }}</div>
+              <div class="title">{{ item.title }}</div>
             </div>
           </li>
         </ul>
+        <div class="product-service">
+          <div class="titles">产品和服务</div>
+          <img class="bg" src="~/assets/images/home/bg.png" alt="" />
+          <ul>
+            <li v-for="item in productList" :key="item.title">
+              <img :src="item.img" alt="" />
+              <div class="content">
+                <div class="name">{{ item.title }}</div>
+                <div class="text">{{ item.subTitle }}</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <advantage-mobile></advantage-mobile>
+        <custom-mobile title="这些客户更认可志业人才" :imgList="customList">
+        </custom-mobile>
       </div>
-      <advantage-mobile></advantage-mobile>
-      <custom-mobile title="这些客户更认可志业人才" :imgList="customList">
-      </custom-mobile>
-    </div>
-    <footer-mobile></footer-mobile>
+      <footer-mobile></footer-mobile>
+    </section>
   </section>
 </template>
 
@@ -382,7 +384,7 @@ $color = #0050B3;
       }
 
       img {
-        width: 45px;
+        width: 60px;
       }
 
       .sum-title {
@@ -408,6 +410,8 @@ $color = #0050B3;
 }
 
 .home-mobile {
+  display: none;
+  min-width: 320px;
   margin-top: -0.89rem;
 
   .titles {
@@ -454,7 +458,8 @@ $color = #0050B3;
       }
 
       img {
-        width: 0.8rem;
+        width: 0.6rem;
+        height: 0.46rem;
       }
     }
 
@@ -506,6 +511,16 @@ $color = #0050B3;
 
   .banner-mobile {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .home {
+    display: none;
+  }
+
+  .home-mobile {
+    display: block;
   }
 }
 </style>

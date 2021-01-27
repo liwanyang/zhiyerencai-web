@@ -1,19 +1,31 @@
 <template>
-  <section class="news-detail" :class="{ 'news-detail-mobile': IS_MOBILE }">
-    <div>
-      <div class="title">{{ currentContent.title }}</div>
-      <div class="date">{{ currentContent.date }}</div>
-    </div>
-    <div class="content">
-      <div v-for="item in currentContent.contentList" :key="item">
-        <p v-if="item.indexOf('/_nuxt') < 0">{{ item }}</p>
-        <img v-else :src="item" alt="" />
+  <section>
+    <section class="news-detail">
+      <div>
+        <div class="title">{{ currentContent.title }}</div>
+        <div class="date">{{ currentContent.date }}</div>
       </div>
-    </div>
-    <footers v-if="Object.keys(currentContent).length && !IS_MOBILE"></footers>
-    <footer-mobile
-      v-if="Object.keys(currentContent).length && IS_MOBILE"
-    ></footer-mobile>
+      <div class="content">
+        <div v-for="item in currentContent.contentList" :key="item">
+          <p v-if="item.indexOf('/_nuxt') < 0">{{ item }}</p>
+          <img v-else :src="item" alt="" />
+        </div>
+      </div>
+      <footers></footers>
+    </section>
+    <section class="news-detail-mobile">
+      <div>
+        <div class="title">{{ currentContent.title }}</div>
+        <div class="date">{{ currentContent.date }}</div>
+      </div>
+      <div class="content">
+        <div v-for="item in currentContent.contentList" :key="item">
+          <p v-if="item.indexOf('/_nuxt') < 0">{{ item }}</p>
+          <img v-else :src="item" alt="" />
+        </div>
+      </div>
+      <footer-mobile></footer-mobile>
+    </section>
   </section>
 </template>
 
@@ -136,35 +148,48 @@ export default {
       margin-bottom: 22px;
     }
   }
+}
 
-  &.news-detail-mobile {
-    &>div {
-      padding: 0.27rem 0.35rem;
-      width: auto;
+.news-detail-mobile {
+  display: none;
+
+  &>div {
+    padding: 0.27rem 0.35rem;
+    width: auto;
+    position: relative;
+  }
+
+  .content {
+    p {
+      font-size: 0.2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
 
-    .content {
-      p {
-        font-size: 0.2rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-      }
-
-      img {
-        width: 5.69rem;
-      }
+    img {
+      width: 5.69rem;
     }
+  }
 
-    .title {
-      font-size: 0.24rem;
-    }
+  .title {
+    font-size: 0.24rem;
+  }
 
-    .date {
-      font-size: 0.16rem;
-    }
+  .date {
+    font-size: 0.16rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .news-detail {
+    display: none;
+  }
+
+  .news-detail-mobile {
+    display: block;
   }
 }
 </style>

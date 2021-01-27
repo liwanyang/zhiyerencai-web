@@ -1,10 +1,6 @@
 <template>
   <section class="footers-mobile">
-    <img
-      class="footer-logo"
-      src="~/assets/images/logo_bottom.png"
-      alt=""
-    >
+    <img class="footer-logo" src="~/assets/images/logo_bottom.png" alt="" />
     <section class="footer-contact">
       <div class="item footer-phone">
         <div class="title">客服电话</div>
@@ -18,17 +14,11 @@
       <div class="ecode">
         <div>
           <div class="ecode-title">关注我们</div>
-          <img
-            src="~/assets/images/contact_program.jpg"
-            alt=""
-          >
+          <img src="~/assets/images/contact_program.jpg" alt="" />
         </div>
         <div class="Tiktok-ecode">
           <div class="ecode-title">官方抖音</div>
-          <img
-            src="~/assets/images/contact_douyin.png"
-            alt=""
-          >
+          <img src="~/assets/images/contact_douyin.png" alt="" />
         </div>
       </div>
     </section>
