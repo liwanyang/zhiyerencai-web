@@ -283,7 +283,7 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      if (scrollTop > 1) {
+      if (scrollTop > 2) {
         // console.log(1, "滚动了");
       } else {
         // console.log(2, "回到顶部");
@@ -416,6 +416,7 @@ $color = #0050B3;
 
   .titles {
     font-size: 0.26rem;
+    font-weight: bold;
   }
 
   .banner {

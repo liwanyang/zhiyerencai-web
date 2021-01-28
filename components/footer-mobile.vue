@@ -1,6 +1,11 @@
 <template>
   <section class="footers-mobile">
-    <img class="footer-logo" src="~/assets/images/logo_bottom.png" alt="" />
+    <img
+      @click="goHome"
+      class="footer-logo"
+      src="~/assets/images/logo_bottom.png"
+      alt=""
+    />
     <section class="footer-contact">
       <div class="item footer-phone">
         <div class="title">客服电话</div>
@@ -32,6 +37,15 @@
     </section>
   </section>
 </template>
+<script>
+export default {
+  methods: {
+    goHome() {
+      this.$router.push({ path: "/" });
+    },
+  },
+};
+</script>
 <style lang="stylus" scoped>
 .footers-mobile {
   margin-top: 1.6rem;
@@ -47,6 +61,7 @@
   .footer-logo {
     width: 1.16rem;
     height: 0.33rem;
+    cursor: pointer;
   }
 
   .title {
@@ -106,6 +121,10 @@
     font-size: 0.17rem;
     margin-top: 0.1rem;
     line-height: 0.3rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 3.6rem;
   }
 }
 </style>

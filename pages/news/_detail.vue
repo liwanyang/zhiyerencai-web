@@ -43,8 +43,8 @@ export default {
       newList: [
         {
           id: 1,
-          title: '志业人才旗下职业蛙招聘发布战"疫"招募令1',
-          date: "2020-04-23 16:11:16",
+          title: '志业人才推出"微笑口罩计划"，缓解就业压力',
+          date: "2020-04-23 17:08:35",
           contentList: [
             '"微笑口罩计划1"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在',
             require("~/assets/images/news/news_image.png"),
@@ -145,7 +145,7 @@ export default {
 
     img {
       width: 718px;
-      margin-bottom: 22px;
+      margin: 21px 0;
     }
   }
 }
@@ -160,6 +160,9 @@ export default {
   }
 
   .content {
+    padding: 0 0.35rem 0.27rem 0.35rem;
+    margin-top: -0.12rem;
+
     p {
       font-size: 0.2rem;
       overflow: hidden;
@@ -171,6 +174,7 @@ export default {
 
     img {
       width: 5.69rem;
+      margin: 0.21rem 0;
     }
   }
 

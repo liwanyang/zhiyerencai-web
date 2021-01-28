@@ -6,21 +6,17 @@
         v-for="(item, index) in tabList"
         :key="item"
         @click="getIndex(index)"
-        :class="{'tab-active': tabIndex === index}"
-      >{{item}}</li>
+        :class="{ 'tab-active': tabIndex === index }"
+      >
+        {{ item }}
+      </li>
     </ul>
     <div class="content">
-      <img
-        :src="currentContent.img"
-        alt=""
-      >
+      <img :src="currentContent.img" alt="" />
       <div class="content-list">
-        <h3>{{currentContent.subTitle}}</h3>
+        <h3>{{ currentContent.subTitle }}</h3>
         <ul class="content-ul">
-          <li
-            v-for="ele in currentContent.list"
-            :key="ele"
-          >{{ele}}</li>
+          <li v-for="ele in currentContent.list" :key="ele">{{ ele }}</li>
         </ul>
       </div>
     </div>
@@ -41,8 +37,8 @@ export default {
           list: [
             "专业团队为企业定制专属服务",
             "5大专业领域、650万蓝领人才数据支撑",
-            "AI智选造就高效人岗速配"
-          ]
+            "AI智选造就高效人岗速配",
+          ],
         },
         {
           title: "志业实训基地",
@@ -54,8 +50,8 @@ export default {
             "联合企业在职业院校开展产教融合业务，招生招工一体化，入校即入企，上课即上岗，毕业即就业",
             "60万+高校人才资源",
             "世界知名企业联合实训",
-            "定向办学，产教融合，达成人、企、校三方共赢"
-          ]
+            "定向办学，产教融合，达成人、企、校三方共赢",
+          ],
         },
         {
           title: "开拓者零工",
@@ -67,8 +63,8 @@ export default {
             "满足企业多元场景灵活用工需求",
             "顾问式一对一服务，放心可托管",
             "优化企业用工成本，安全合规可信赖",
-            "助力企业构建人力储备库"
-          ]
+            "助力企业构建人力储备库",
+          ],
         },
         {
           title: "志业AIJob",
@@ -78,27 +74,27 @@ export default {
           img: require("../assets/images/home/tab4.png"),
           list: [
             "基于“志业云大脑”的智能运算服务",
-            "AI招聘助手，轻松应答，快速约面到面"
-          ]
-        }
-      ]
+            "AI招聘助手，轻松应答，快速约面到面",
+          ],
+        },
+      ],
     };
   },
   computed: {
     currentContent() {
       console.log(
         "list::",
-        this.contentList.find(item => item.id === this.tabIndex + 1)
+        this.contentList.find((item) => item.id === this.tabIndex + 1)
       );
 
-      return this.contentList.find(item => item.id === this.tabIndex + 1);
-    }
+      return this.contentList.find((item) => item.id === this.tabIndex + 1);
+    },
   },
   methods: {
     getIndex(index) {
       this.tabIndex = index;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="stylus" scoped>
@@ -106,6 +102,7 @@ $color = #0050B3;
 
 .product-service {
   .title {
+    font-weight: bold;
     font-size: 21px;
     color: #434343;
     text-align: center;
@@ -142,7 +139,7 @@ $color = #0050B3;
   .content {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 33px;
 
     img {
       width: 389px;
@@ -162,7 +159,7 @@ $color = #0050B3;
         margin-top: 10px;
 
         li {
-          line-height: 20px;
+          line-height: 40px;
           font-size: 14px;
           color: #434343;
         }

@@ -40,6 +40,7 @@ $color = #0050B3;
   margin-top: 50px;
 
   .title {
+    font-weight: bold;
     margin-bottom: 0.45rem;
     font-size: 0.26rem;
     color: #434343;

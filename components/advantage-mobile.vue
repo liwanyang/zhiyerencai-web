@@ -58,6 +58,7 @@ $color = #0050B3;
   }
 
   .titles {
+    font-weight: bold;
     font-size: 0.26rem;
     margin: 0.7rem 0 0.26rem 0;
     text-align: center;

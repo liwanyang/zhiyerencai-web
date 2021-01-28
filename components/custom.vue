@@ -1,6 +1,6 @@
 <template>
   <div class="custom">
-    <div class="title">{{title}}</div>
+    <div class="title">{{ title }}</div>
 
     <!-- v-model="list" -->
     <draggable
@@ -10,21 +10,18 @@
       @start="drag = true"
       @end="drag = false"
     >
-      <transition-group
-        type="transition"
-        :name="!drag ? 'flip-list' : null"
-      >
+      <transition-group type="transition" :name="!drag ? 'flip-list' : null">
         <li
           class="list-group-item"
           v-for="element in imgList"
           :key="element.id"
         >
           <img
-            v-for="(item,index) in element.list"
+            v-for="(item, index) in element.list"
             :key="index"
             :src="item"
             alt=""
-          >
+          />
         </li>
       </transition-group>
     </draggable>
@@ -34,12 +31,12 @@
 import draggable from "vuedraggable";
 export default {
   components: {
-    draggable
+    draggable,
   },
   props: ["title", "imgList"],
   data() {
     return {
-      drag: false
+      drag: false,
     };
   },
   computed: {
@@ -48,10 +45,10 @@ export default {
         animation: 200,
         group: "description",
         disabled: false,
-        ghostClass: "ghost"
+        ghostClass: "ghost",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="stylus" scoped>
@@ -61,6 +58,7 @@ $color = #0050B3;
   margin-top: 50px;
 
   .title {
+    font-weight: bold;
     margin-bottom: 37px;
     font-size: 21px;
     color: #434343;

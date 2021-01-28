@@ -6,7 +6,12 @@
       </div>
       <header class="header-pc">
         <div>
-          <img src="~/assets/images/logo.png" alt="" />
+          <img
+            @click="goHome"
+            class="header-logo"
+            src="~/assets/images/logo.png"
+            alt=""
+          />
           <ul>
             <li :class="{ actived: currentRouterName === 'index' }">
               <nuxt-link to="/">首页</nuxt-link>
@@ -36,8 +41,12 @@
       <nuxt />
     </div>
     <div class="default-mobile">
-      <header class="header-mobile">
+      <header
+        class="header-mobile"
+        :class="{ isScroll: isScroll && currentRouterName === 'index' }"
+      >
         <img
+          @click="goHome"
           v-if="currentRouterName === 'index'"
           class="logo"
           src="~/assets/images/logo.png"
@@ -96,6 +105,7 @@ export default {
   data() {
     return {
       dialog: false,
+      isScroll: true,
     };
   },
   computed: {
@@ -111,7 +121,8 @@ export default {
         case "about":
           return "关于我们";
         case "news":
-          return "新闻动态";
+        case "news-detail":
+          return "公司动态";
         case "contact":
           return "联系我们";
         default:
@@ -147,15 +158,38 @@ export default {
         };
 
       if (!doc.addEventListener) return;
+      recalc();
       win.addEventListener(resizeEvt, recalc, false);
       doc.addEventListener("DOMContentLoaded", recalc, false);
     })(document, window);
 
     window.addEventListener("scroll", this.handleScroll, false);
   },
+  destroyed() {
+    if (this.isIE11()) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+  },
   methods: {
+    goHome() {
+      this.$router.push({ path: "/" });
+    },
+    isIE11: function () {
+      return !!window.MSInputMethodContext && !!document.documentMode;
+    },
     handleScroll() {
       this.dialog = false;
+      var scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      if (scrollTop > 2) {
+        console.log(1, "滚动了");
+        this.isScroll = false;
+      } else {
+        console.log(2, "回到顶部");
+        this.isScroll = true;
+      }
     },
     goBack() {
       if (window.history.length <= 1) {
@@ -223,6 +257,7 @@ export default {
       width: 1000px;
 
       img {
+        cursor: pointer;
         width: 190px;
         height: 29px;
       }
@@ -249,6 +284,11 @@ export default {
 .default-mobile {
   padding-top: 0.89rem;
   display: none;
+
+  .isScroll {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+  }
 
   .nav-name {
     font-size: 0.22rem;
@@ -314,6 +354,7 @@ export default {
     .logo {
       width: 2.49rem;
       height: 0.37rem;
+      cursor: pointer;
     }
 
     .back {

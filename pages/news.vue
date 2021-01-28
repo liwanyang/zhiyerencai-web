@@ -152,6 +152,7 @@ export default {
   color: #434343;
 
   .title {
+    font-weight: bold;
     color: #434343;
     font-size: 21px;
   }
@@ -260,6 +261,7 @@ export default {
     position: relative;
 
     .title {
+      font-weight: bold;
       font-size: 0.26rem;
       margin: 0.33rem 0 0.14rem 0;
       text-align: center;
@@ -270,6 +272,7 @@ export default {
         display: flex;
         justify-content: center;
         padding: 0.26rem 0.35rem;
+        cursor: pointer;
 
         .content {
           width: 2.85rem;
@@ -299,8 +302,8 @@ export default {
         }
 
         img {
-          width: 3.36rem;
-          height: 1.73rem;
+          width: 2.69rem;
+          height: 1.45rem;
         }
       }
     }

@@ -140,6 +140,7 @@ export default {
   position: relative;
 
   .title {
+    font-weight: bold;
     color: #434343;
     font-size: 21px;
   }
@@ -266,7 +267,8 @@ export default {
 }
 
 .about-mobile {
-  disply: none;
+  display: none;
+  min-width: 320px;
 
   &>section.parents {
     padding: 0.39rem 0.35rem;
@@ -274,6 +276,7 @@ export default {
   }
 
   .title {
+    font-weight: bold;
     font-size: 0.26rem;
     text-align: center;
   }

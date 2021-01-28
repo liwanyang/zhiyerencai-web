@@ -143,6 +143,7 @@ export default {
   position: relative;
 
   .title {
+    font-weight: bold;
     color: #434343;
     font-size: 21px;
   }
@@ -297,6 +298,7 @@ export default {
   }
 
   .title {
+    font-weight: bold;
     font-size: 0.26rem;
   }
 
@@ -307,6 +309,10 @@ export default {
       li {
         text-align: center;
         margin-top: 0.37rem;
+
+        .name {
+          font-size: 0.24rem;
+        }
 
         .icons {
           display: flex;
