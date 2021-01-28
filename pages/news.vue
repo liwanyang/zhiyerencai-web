@@ -1,12 +1,28 @@
 <template>
   <section>
-    <section class="news" :class="{ 'news-child': !getRourerName && isChild }">
-      <div class="banner" v-if="getRourerName">
-        <img src="~/assets/images/news/news.png" alt="" />
+    <section
+      class="news"
+      :class="{ 'news-child': !getRourerName && isChild }"
+    >
+      <div
+        class="banner"
+        v-if="getRourerName"
+      >
+        <img
+          src="~/assets/images/news/news.png"
+          alt=""
+        />
       </div>
       <div class="news-list">
-        <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-        <div class="list" v-if="getRourerName">
+        <img
+          class="bg"
+          src="~/assets/images/home/bg.png"
+          alt=""
+        />
+        <div
+          class="list"
+          v-if="getRourerName"
+        >
           <div class="title">新闻动态</div>
           <ul>
             <li
@@ -14,7 +30,10 @@
               :key="item.name"
               @click="enterDetail(item.id)"
             >
-              <img :src="item.img" alt="" />
+              <img
+                :src="item.img"
+                alt=""
+              />
               <div class="content">
                 <div>
                   <div class="name">{{ item.name }}</div>
@@ -35,8 +54,15 @@
     </section>
     <section class="news-mobile">
       <div class="news-list">
-        <img class="bg" src="~/assets/images/home/bg.png" alt="" />
-        <div class="list" v-if="getRourerName">
+        <img
+          class="bg"
+          src="~/assets/images/home/bg.png"
+          alt=""
+        />
+        <div
+          class="list"
+          v-if="getRourerName"
+        >
           <div class="title">新闻动态</div>
           <ul>
             <li
@@ -51,7 +77,10 @@
                 </div>
                 <div class="date">{{ item.date }}</div>
               </div>
-              <img :src="item.img" alt="" />
+              <img
+                :src="item.img"
+                alt=""
+              />
             </li>
           </ul>
         </div>
@@ -81,49 +110,49 @@ export default {
         {
           id: 1,
           name: '志业人才推出"微笑口罩计划"，缓解就业压力',
-          img: require("~/assets/images/news/news_image.png"),
+          img: require("~/assets/images/news/1.png"),
           date: "2020-04-23 17:08:35",
           text:
-            '"微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在短时内获得了超过了10 万的浏览量。',
+            '"微笑口罩计划"是由志业人才联合创始人尤清清组织发起，他结合志业人才的企业优势，率先推出《"微笑口罩"上海零售业岗位支援计划》，该计划一经推出，便在网络上获得了大量点赞和支持。期间发布的《战"疫"招募令》更是在短时内获得了超过了10 万的浏览量。'
         },
         {
           id: 2,
           name: "带动10000+人就业的90后女孩:这才刚刚开始",
-          img: require("~/assets/images/newsDetail/news2/2.jpeg"),
+          img: require("~/assets/images/news/2.png"),
           date: "2019-06-26 17:00",
           text:
-            "女性在当下已经发生了很大变化，马云还提到，以前很多女性的梦想就是嫁个好男人有个好孩子，但现在很多女性的梦想是改变世界。“我相信本世纪女性真正能够成为推动社会政治、文化、经济进步的主要力量。”",
-        },
-        {
-          id: 3,
-          name: "她为4.6万人找到工作，她穿上旗袍做直播，她带领200位绣娘脱贫……",
-          img: require("~/assets/images/newsDetail/news3/4.png"),
-          date: "2020-06-10 19:56",
-          text:
-            "由徐汇区人社局和红河州人社局共同主办的 2020徐汇-红河“创业梦之星”评选于6月9日在徐汇通、哔哩哔哩和抖音直播上进行了“云启动”。",
+            "女性在当下已经发生了很大变化，马云还提到，以前很多女性的梦想就是嫁个好男人有个好孩子，但现在很多女性的梦想是改变世界。“我相信本世纪女性真正能够成为推动社会政治、文化、经济进步的主要力量。”"
         },
         {
           id: 4,
           name:
             "徐汇区人社局联合EFG“天使基金”资助企业职业蛙招聘平台，推出“微笑”系列计划",
-          img: require("~/assets/images/newsDetail/news4/1.png"),
+          img: require("~/assets/images/news/4.png"),
           date: "2020-06-16 16:11:16",
           text:
-            "2019年岁末，一场突如其来的新冠肺炎疫情打破了浓浓的新春氛围，党中央高度对此重视，习近平总书记指示：“要把人民生命安全和身体健康放在第一位”，2020年1月23日，随着一声令下，武汉封城，全国医护人员大动员，纷纷投入到一线的战疫之中。",
-        },
-      ],
+            "2019年岁末，一场突如其来的新冠肺炎疫情打破了浓浓的新春氛围，党中央高度对此重视，习近平总书记指示：“要把人民生命安全和身体健康放在第一位”，2020年1月23日，随着一声令下，武汉封城，全国医护人员大动员，纷纷投入到一线的战疫之中。"
+        }
+        // {
+        //   id: 3,
+        //   name: "她为4.6万人找到工作，她穿上旗袍做直播，她带领200位绣娘脱贫……",
+        //   img: require("~/assets/images/newsDetail/news3/4.png"),
+        //   date: "2020-06-10 19:56",
+        //   text:
+        //     "由徐汇区人社局和红河州人社局共同主办的 2020徐汇-红河“创业梦之星”评选于6月9日在徐汇通、哔哩哔哩和抖音直播上进行了“云启动”。"
+        // }
+      ]
     };
   },
   computed: {
     getRourerName() {
       return Object.keys(this.$route.params).length === 0;
-    },
+    }
   },
   components: { footers, footerMobile },
   watch: {
     $route() {
       this.setAfter();
-    },
+    }
   },
   created() {
     this.setAfter();
@@ -142,8 +171,8 @@ export default {
     },
     enterDetail(id) {
       this.$router.push({ name: "news-detail", params: { detail: id } });
-    },
-  },
+    }
+  }
 };
 </script>
 
