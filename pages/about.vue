@@ -97,27 +97,27 @@ export default {
       title: "关于我们",
       honorList: [
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor.png"),
           text: "2015中国人力资源外包服务行业“客户服务满意度奖”",
         },
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor1.png"),
           text: "2016品牌中国“金谱奖”人力资源服务行业新锐品牌",
         },
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor.png"),
           text: "2016中国人力资源外包服务行业“优秀蓝领派遣企业”",
         },
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor1.png"),
           text: "大中华区人力资源服务品牌100强",
         },
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor.png"),
           text: "2017中国人才管理奖",
         },
         {
-          img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/about/honor1.png"),
           text: "全国优秀民办职业介绍机构",
         },
       ],
