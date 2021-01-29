@@ -312,13 +312,14 @@ export default {
 
         .name {
           font-size: 0.24rem;
+          margin-left: 0.1rem;
         }
 
         .icons {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 0.01rem;
+          margin-bottom: 0.1rem;
 
           img {
             width: 0.45rem;
@@ -348,6 +349,11 @@ export default {
       ul {
         li {
           margin-bottom: 0.49rem;
+
+          .name {
+            font-size: 0.24rem;
+            margin-bottom: 0.05rem;
+          }
         }
       }
 

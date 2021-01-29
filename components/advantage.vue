@@ -48,7 +48,7 @@ export default {
 $color = #0050B3;
 
 .advantage {
-  margin-top: 142px;
+  margin-top: 80px;
 
   .title {
     font-weight: bold;

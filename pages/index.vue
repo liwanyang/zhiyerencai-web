@@ -2,24 +2,15 @@
   <section>
     <section class="home">
       <div class="banner">
-        <img
-          src="~/assets/images/home/banner.png"
-          alt=""
-        />
+        <img src="~/assets/images/home/banner.png" alt="" />
         <div class="title">
           <div class="banner-title">蓝领人力资源定制领跑者</div>
           <div class="banner-subTitle">专业成就企业未来</div>
         </div>
       </div>
       <ul class="range">
-        <li
-          v-for="item in sumList"
-          :key="item.title"
-        >
-          <img
-            :src="item.icon"
-            alt=""
-          />
+        <li v-for="item in sumList" :key="item.title">
+          <img :src="item.icon" alt="" />
           <div class="sum-title">
             <div class="sum">{{ item.sum }}</div>
             <div class="title">{{ item.title }}</div>
@@ -27,18 +18,11 @@
         </li>
       </ul>
       <section class="main">
-        <img
-          class="bg"
-          src="~/assets/images/home/bg.png"
-          alt=""
-        />
+        <img class="bg" src="~/assets/images/home/bg.png" alt="" />
         <div class="products">
           <product-service></product-service>
           <advantage></advantage>
-          <custom
-            :imgList="customList"
-            title="这些客户更认可志业人才"
-          ></custom>
+          <custom :imgList="customList" title="这些客户更认可志业人才"></custom>
           <custom
             :imgList="resourcesList"
             title="我们正联合这些伙伴改变人力资源行业"
@@ -59,14 +43,8 @@
           <div class="sub-title">专业成就企业未来</div>
         </div>
         <ul class="range">
-          <li
-            v-for="item in sumList"
-            :key="item.title"
-          >
-            <img
-              :src="item.icon"
-              alt=""
-            />
+          <li v-for="item in sumList" :key="item.title">
+            <img :src="item.icon" alt="" />
             <div class="sum-title">
               <div class="sum">{{ item.sum }}</div>
               <div class="title">{{ item.title }}</div>
@@ -75,20 +53,10 @@
         </ul>
         <div class="product-service">
           <div class="titles">产品和服务</div>
-          <img
-            class="bg"
-            src="~/assets/images/home/bg.png"
-            alt=""
-          />
+          <img class="bg" src="~/assets/images/home/bg.png" alt="" />
           <ul>
-            <li
-              v-for="item in productList"
-              :key="item.title"
-            >
-              <img
-                :src="item.img"
-                alt=""
-              />
+            <li v-for="item in productList" :key="item.title">
+              <img :src="item.img" alt="" />
               <div class="content">
                 <div class="name">{{ item.title }}</div>
                 <div class="text">{{ item.subTitle }}</div>
@@ -97,10 +65,7 @@
           </ul>
         </div>
         <advantage-mobile></advantage-mobile>
-        <custom-mobile
-          title="这些客户更认可志业人才"
-          :imgList="customList"
-        >
+        <custom-mobile title="这些客户更认可志业人才" :imgList="customList">
         </custom-mobile>
       </div>
       <footer-mobile></footer-mobile>
@@ -129,23 +94,23 @@ export default {
         {
           title: "企业客户",
           icon: require("~/assets/images/home/icon_company.png"),
-          sum: "60,000+"
+          sum: "60,000+",
         },
         {
           title: "蓝领人才",
           icon: require("~/assets/images/home/icon_worker.png"),
-          sum: "500,000+"
+          sum: "500,000+",
         },
         {
           title: "城市布点",
           icon: require("~/assets/images/home/icon_city.png"),
-          sum: "200+"
+          sum: "200+",
         },
         {
           title: "合作院校",
           icon: require("~/assets/images/home/icon_college.png"),
-          sum: "300+"
-        }
+          sum: "300+",
+        },
       ],
       drag: false,
 
@@ -164,8 +129,8 @@ export default {
             require("~/assets/images/home/partner_tongyi.png"),
             require("~/assets/images/home/partner_mcdonald.png"),
             require("~/assets/images/home/partner_kfc.png"),
-            require("~/assets/images/home/partner_xibei.png")
-          ]
+            require("~/assets/images/home/partner_xibei.png"),
+          ],
         },
         {
           id: 2,
@@ -181,9 +146,9 @@ export default {
             require("~/assets/images/home/partner_guogong.png"),
             require("~/assets/images/home/partner_kungfu.png"),
             require("~/assets/images/home/partner_laowang.png"),
-            require("~/assets/images/home/partner_peter.png")
-          ]
-        }
+            require("~/assets/images/home/partner_peter.png"),
+          ],
+        },
       ],
       resourcesList: [
         {
@@ -194,8 +159,8 @@ export default {
             require("~/assets/images/home/partner_3m.png"),
             require("~/assets/images/home/partner_dazhong.png"),
             require("~/assets/images/home/partner_ford.png"),
-            require("~/assets/images/home/partner_yiqi.png")
-          ]
+            require("~/assets/images/home/partner_yiqi.png"),
+          ],
         },
         {
           id: 2,
@@ -205,9 +170,9 @@ export default {
             require("~/assets/images/home/partner_boe.png"),
             require("~/assets/images/home/partner_future.png"),
             require("~/assets/images/home/partner_weima.png"),
-            require("~/assets/images/home/partner_byd.png")
-          ]
-        }
+            require("~/assets/images/home/partner_byd.png"),
+          ],
+        },
       ],
       productList: [
         {
@@ -218,8 +183,8 @@ export default {
           list: [
             "专业团队为企业定制专属服务",
             "5大专业领域、650万蓝领人才数据支撑",
-            "AI智选造就高效人岗速配"
-          ]
+            "AI智选造就高效人岗速配",
+          ],
         },
         {
           title: "志业实训基地",
@@ -231,8 +196,8 @@ export default {
             "联合企业在职业院校开展产教融合业务，招生招工一体化，入校即入企，上课即上岗，毕业即就业",
             "60万+高校人才资源",
             "世界知名企业联合实训",
-            "定向办学，产教融合，达成人、企、校三方共赢"
-          ]
+            "定向办学，产教融合，达成人、企、校三方共赢",
+          ],
         },
         {
           title: "开拓者零工",
@@ -244,8 +209,8 @@ export default {
             "满足企业多元场景灵活用工需求",
             "顾问式一对一服务，放心可托管",
             "优化企业用工成本，安全合规可信赖",
-            "助力企业构建人力储备库"
-          ]
+            "助力企业构建人力储备库",
+          ],
         },
         {
           title: "志业AIJob",
@@ -255,21 +220,21 @@ export default {
           img: require("../assets/images/home/tab4.png"),
           list: [
             "基于“志业云大脑”的智能运算服务",
-            "AI招聘助手，轻松应答，快速约面到面"
-          ]
-        }
-      ]
+            "AI招聘助手，轻松应答，快速约面到面",
+          ],
+        },
+      ],
     };
   },
   computed: {
     ...mapState({
-      device: state => state.device,
-      screenWidth: state => state.screenWidth,
-      userLogin: state => state.userLogin
+      device: (state) => state.device,
+      screenWidth: (state) => state.screenWidth,
+      userLogin: (state) => state.userLogin,
     }),
     showIndex() {
       return this.tabNum === 1;
-    }
+    },
   },
   components: {
     ProductService,
@@ -278,7 +243,7 @@ export default {
     footers,
     advantageMobile,
     customMobile,
-    footerMobile
+    footerMobile,
   },
   created() {
     //
@@ -295,12 +260,12 @@ export default {
     }
   },
   methods: {
-    hashChangeHandler: function() {
+    hashChangeHandler: function () {
       this.$router.push(
         window.location.hash.substring(1, window.location.hash.length)
       );
     },
-    isIE11: function() {
+    isIE11: function () {
       return !!window.MSInputMethodContext && !!document.documentMode;
     },
     async init() {
@@ -354,8 +319,8 @@ export default {
       } else {
         return { type: "未知", version: "未知" };
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -535,7 +500,7 @@ $color = #0050B3;
             }
 
             .text {
-              font-size: 0.2rem;
+              font-size: 0.18rem;
               line-height: 0.28rem;
               margin-top: 0.12rem;
             }

@@ -159,7 +159,7 @@ $color = #0050B3;
         margin-top: 10px;
 
         li {
-          line-height: 40px;
+          line-height: 30px;
           font-size: 14px;
           color: #434343;
         }

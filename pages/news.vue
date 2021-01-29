@@ -232,6 +232,7 @@ export default {
 
           .content {
             .name {
+              font-weight: bold;
               font-size: 16px;
               color: #434343;
               margin-bottom: 6px;

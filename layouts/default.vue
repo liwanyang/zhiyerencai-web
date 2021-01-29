@@ -270,6 +270,7 @@ export default {
           margin-right: 50px;
           cursor: pointer;
           padding-bottom: 2px;
+          font-size: 18px;
 
           &:hover, &.actived {
             color: #0050B3;
