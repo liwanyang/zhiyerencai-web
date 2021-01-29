@@ -116,6 +116,7 @@ $color = #0050B3;
     li {
       margin-right: 106px;
       cursor: pointer;
+      font-size: 16px;
 
       &:last-child {
         margin-right: 0;
