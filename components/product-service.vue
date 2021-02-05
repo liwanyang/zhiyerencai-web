@@ -1,7 +1,7 @@
 <template>
   <div class="product-service">
     <div class="title">产品和服务</div>
-    <ul class="tab">
+    <!-- <ul class="tab">
       <li
         v-for="(item, index) in tabList"
         :key="item"
@@ -10,13 +10,22 @@
       >
         {{ item }}
       </li>
-    </ul>
-    <div class="content">
+    </ul> -->
+    <!-- <div class="content">
       <img :src="currentContent.img" alt="" />
       <div class="content-list">
         <h3>{{ currentContent.subTitle }}</h3>
         <ul class="content-ul">
           <li v-for="ele in currentContent.list" :key="ele">{{ ele }}</li>
+        </ul>
+      </div>
+    </div> -->
+    <div class="content" v-for="item in contentList" :key="item.id">
+      <img :src="item.img" alt="" />
+      <div class="content-list">
+        <h3>{{ item.subTitle }}</h3>
+        <ul class="content-ul">
+          <li v-for="ele in item.list" :key="ele">{{ ele }}</li>
         </ul>
       </div>
     </div>
@@ -140,7 +149,7 @@ $color = #0050B3;
   .content {
     display: flex;
     justify-content: center;
-    margin-top: 33px;
+    margin-top: 65px;
 
     img {
       width: 389px;
