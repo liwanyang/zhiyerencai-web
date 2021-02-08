@@ -33,7 +33,8 @@
       <div class="ecode">
         <div>
           <div class="ecode-title">关注我们</div>
-          <img src="~/assets/images/contact_program.jpg" alt="" />
+          <img src="~/assets/images/contact_douyin1.jpg" alt="" />
+          <!-- <img src="~/assets/images/contact_program.jpg" alt="" /> -->
         </div>
         <div class="Tiktok-ecode">
           <div class="ecode-title">官方抖音</div>

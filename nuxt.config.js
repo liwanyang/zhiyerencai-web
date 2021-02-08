@@ -11,7 +11,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: "viewport", content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" },
       { name: 'keywords', content: '志业人才，职业蛙' },
-      { hid: 'description', name: 'description', content: '志业人才，蓝领人力资源服务定制领跑者。公司致力于打造世界领先的产、教、研融合的人才生涯服务，累计帮助百万人入职2700余家中大型企业的心仪岗位，定制化深度解决全国企业的新生代蓝领用工痛点。与全国超50所中高职院校联合建立实训学院，聚焦现代服务业、制造业服务外包、人才招聘与派遣、中高端灵活用工、残疾人就业安置、财税筹划管理咨询等服务。' }
+      { hid: 'description', name: 'description', content: '志业人才，蓝领人力资源服务定制领跑者。公司致力于打造世界领先的产、教、研融合的人才生涯服务，累计帮助近千万人入职60000余家中大型企业的心仪岗位，定制化深度解决全国企业的新生代蓝领用工痛点。与全国超300所中高职院校联合建立实训学院，聚焦现代服务业、制造业服务外包、人才招聘与派遣、中高端灵活用工、残疾人就业安置、财税筹划管理咨询等服务。' }
     ],
 
     script: [

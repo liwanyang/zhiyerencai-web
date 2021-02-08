@@ -110,12 +110,13 @@ export default {
       honorList: [
         {
           name: "官方抖音",
-          img: require("~/assets/images/contact_program.jpg"),
+          img: require("~/assets/images/contact_douyin.png"),
           text: "为您呈现不一样的志业人才",
         },
         {
           name: "公众号",
-          img: require("~/assets/images/contact_douyin.png"),
+          // img: require("~/assets/images/contact_douyin.png"),
+          img: require("~/assets/images/contact_program.jpg"),
           text: "随时随地查看您的数据报告",
         },
         {
