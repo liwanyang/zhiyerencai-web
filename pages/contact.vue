@@ -115,13 +115,12 @@ export default {
         },
         {
           name: "公众号",
-          // img: require("~/assets/images/contact_douyin.png"),
-          img: require("~/assets/images/contact_program.jpg"),
+          img: require("~/assets/images/contact_douyin1.jpg"),
           text: "随时随地查看您的数据报告",
         },
         {
           name: "小程序",
-          img: require("~/assets/images/contact_program.jpg"),
+          img: require("~/assets/images/contact_douyin1.jpg"),
           text: "随时随地查看您的数据报告",
         },
       ],
